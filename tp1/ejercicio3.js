@@ -1,0 +1,1 @@
+console.log("el resultado es:",8 + 10)
