@@ -1,0 +1,11 @@
+#tiempoRestante {
+  font-size: 100px;
+}
+body {
+  background: #22c1c3;
+  background: radial-gradient(
+    circle,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(9, 107, 145, 1) 100%
+  );
+}

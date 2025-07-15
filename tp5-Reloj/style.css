@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@200..900&family=Michroma&display=swap");
+body {
+  background: #22c1c3;
+  background: radial-gradient(
+    circle,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(9, 107, 145, 1) 100%
+  );
+  background-size: cover;
+  font-family: "Michroma", "Arial Narrow", Arial, sans-serif !important;
+  font-style: italic;
+  font-weight: bolder;
+}
+#fecha {
+  font-size: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: rgba(36, 35, 35, 0.589);
+  color: aliceblue;
+  padding: 15px;
+}
+.estiloReloj {
+  font-size: 38px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: rgba(36, 35, 35, 0.589);
+  color: aliceblue;
+  padding: 25px;
+}
+#segundoPm {
+  text-align: center;
+  font-size: 15px;
+}

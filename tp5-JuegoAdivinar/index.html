@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <title>Juego De Adivinanza</title>
+  </head>
+  <body class="d-flex flex-column m-2 bg-dark">
+    <button class="btn btn-success p-2 mb-4" id="btnComenzarJuego">
+      Comenzar juego!
+    </button>
+    <h2 id="TextosSiGanaONo" class="text-center text-light"></h2>
+    <form class="card border-dark text-center p-3 mt-2" id="formNumeroMagico">
+      <label class="p-3" for="numeroMagico">Adivina El Numero Magico</label>
+      <input
+        type="number"
+        id="numeroMagicoUsuario"
+        class="form-control border-dark text-center"
+        placeholder="Ingrese el numero magico"
+      />
+      <button type="submit" class="btn btn-primary mt-4">Enviar</button>
+    </form>
+    <button id="botonReiniciar" type="reset" class="btn btn-danger mt-5">
+      Reiniciar El Juego
+    </button>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./ejercicio1.js"></script>
+  </body>
+</html>

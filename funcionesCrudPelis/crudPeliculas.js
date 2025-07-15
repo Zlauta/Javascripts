@@ -32,10 +32,10 @@ function agregarPeli(titulo, director, anio, calificacion) {
     // director: director,
     // anio: anio,
     // calificacion: calificacion,
-    titulo,
-    director,
-    anio,
-    calificacion,
+    titulo: prompt("Ingrese Su Pelicula"),
+    director: prompt("Ingrese El Director De La Pelicula"),
+    anio: parseInt(prompt("Ingrese El Año De La Pelicula")),
+    calificacion: parseFloat(prompt("Ingrese La Calificacion De La Pelicula")),
   };
   // agregar la nueva pelicula al listado de peliculas
   peliculas.push(nuevaPelicula);
@@ -46,19 +46,20 @@ function agregarPeli(titulo, director, anio, calificacion) {
 // READ
 function listarPelis(pelis) {
   recuperarPeliculasDesdeLocalStorage();
-  // LLamamos al Id
-  const listaPeliculas = document.getElementById("listaDesordenada");
+  // LLamamos al Id De La Lista UL
+  const tituloH1 = document.getElementById("titulo");
+  tituloH1.textContent = "🎬 Lista de películas:";
+  const listaUl = document.getElementById("listaDesordenada");
   // Hacemos que recorra todas las peliculas de la lista Para Devolverlas Despues
   peliculas.forEach((pelis) => {
     // creamos el nodo LI Donde Tendremos Las Peliculas
-    const li = document.createElement("li");
+    const listaLi = document.createElement("li");
     // Le Damos Texto Al LI y Mostramos
-    li.textContent = pelis.titulo;
+    listaLi.textContent = pelis.titulo;
     // Agregamos el LI al UL
-    listaPeliculas.appendChild(li);
+    listaUl.appendChild(listaLi);
   });
 }
-listarPelis();
 function buscarPeliPorTitulo(nombrePeli) {
   recuperarPeliculasDesdeLocalStorage();
   const resultados = peliculas.filter((pelicula) =>
@@ -130,18 +131,23 @@ function mostrarMenu() {
   switch (opcionesPelis) {
     case 1:
       numero = "Agrega Tu Pelicula";
+      agregarPeli();
       break;
     case 2:
       numero = "Lista De Peliculas";
+      listarPelis();
       break;
     case 3:
       numero = "Que Pelicula Desea Buscar";
+      buscarPeliPorTitulo();
       break;
     case 4:
       numero = "Que Pelicula Desea Editar";
+      actualizarCalificacion();
       break;
     case 5:
       numero = "Que Pelicula Desea Eliminar";
+      eliminarPelicula();
       break;
     case 6:
       numero = "Muchas Gracias Por visitar NUestra Pagina";
@@ -152,3 +158,4 @@ function mostrarMenu() {
   }
   console.log(numero);
 }
+mostrarMenu();
